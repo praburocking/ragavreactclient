@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../public/scss/variables";
+@import "../public/scss/common.scss";
+@import "../public/scss/loginSignup.scss";
+@import "./components/home/home-styles.scss";
+@import "./components/listing/listing.scss";
+@import "./components/details/details.scss";
+
+body {
+  background: #fff;
+}
+
+a {
+  color: unset !important;
+  text-decoration: none;
+  background-color: transparent;
+  &:hover {
+    color: none;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}

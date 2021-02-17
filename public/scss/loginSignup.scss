@@ -1,0 +1,52 @@
+.login-signup-main-div {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(131deg, #00000087 -3%, #0000008c 104%),
+    url("../../src/images/slide-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .container-fluid {
+    .row {
+      .col-md-4,
+      .col-sm-10 {
+        margin-top: 5rem;
+        .register-tab {
+          border: none;
+          margin: 20px 0;
+          .nav-link {
+            width: 50%;
+            border: 0;
+            text-align: center;
+            border-radius: 0;
+            background: #ffffffb8;
+            font-weight: 500;
+            font-size: 17px;
+          }
+          .nav-link.active {
+            background: white;
+          }
+        }
+        .register-tab-content {
+          .form-group {
+            .form-control {
+              background: #000000ba;
+              border: none;
+              border-radius: 6px;
+              margin: 24px 0;
+              padding: 20px;
+            }
+          }
+          .submit-btn {
+            background: #fff;
+            color: black;
+            border: none;
+            padding: 8px 35px;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

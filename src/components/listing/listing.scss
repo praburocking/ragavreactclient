@@ -1,0 +1,77 @@
+.listing-page {
+  width: $side-wid;
+  margin: 4rem auto;
+  .supply-demand-tabs {
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    .nav-link {
+      border: 1px solid $title-color;
+      color: $title-color;
+      border-radius: 0;
+      padding: 10px;
+      width: 30%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .nav-link.active {
+      background: $card-bg;
+      color: $color-white;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.lisitng-card-main {
+  margin: 4rem 0;
+  .row {
+    justify-content: center;
+    .col-md-6 {
+      .listing-card-inner {
+        border: 1px solid #8080803d;
+        padding: 15px;
+        border-radius: 7px;
+        cursor: pointer;
+        color: $card-title;
+        margin-bottom: 3rem;
+        &:hover {
+          background: $card-bg;
+          color: $color-white;
+        }
+        .row {
+          align-items: center;
+          .col-md-6 {
+            .listing-card-img {
+              img {
+                width: 100%;
+              }
+            }
+            .listing-card-content {
+              margin: 10px 0;
+              h6 {
+                font-size: 20px;
+                font-weight: 500;
+                margin: 0;
+              }
+              p {
+                font-size: 14px;
+                font-weight: 300;
+                margin: 20px 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+              small {
+                margin: 0;
+                font-size: 10px;
+                font-weight: 100;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
