@@ -1,12 +1,17 @@
+import { Button } from "bootstrap";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Form.css";
 export default class Register extends Component {
+  handlerButtonClick(event) {
+    event.preventDefault();
+    console.log("register submit test");
+  }
   render() {
     return (
       <div className="form-container">
         <br></br>
-        <form className="register" onSubmit={this.haldlerButtonClick}>
+        <form className="register" onSubmit={this.handlerButtonClick}>
           <h4>REGISTER </h4>
 
           <div className="">
@@ -45,7 +50,7 @@ export default class Register extends Component {
             />
           </div>
 
-          <input type="submit" value="Register" />
+          <Button />
           <div className="form-footer">
             <a href="#">Already have an account?</a>
 

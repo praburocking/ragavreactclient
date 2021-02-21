@@ -1,11 +1,20 @@
 import http from "./httpService";
+import { getCookie } from "../utils/cookieUtil";
 
 function sellersUrl() {
-  return process.env.REACT_APP_API_URL + "/sellers/1/supplies";
+  const userid = getCookie("id");
+  if (userid === "" || userid === undefined || userid === null) {
+    throw "no user found";
+  }
+  return process.env.REACT_APP_API_URL + "/sellers/" + userid + "/supplies";
 }
 
 function buyersUrl() {
-  return process.env.REACT_APP_API_URL + "/buyers/1/requirements";
+  const userid = getCookie("id");
+  if (userid === "" || userid === undefined || userid === null) {
+    throw "no user found";
+  }
+  return process.env.REACT_APP_API_URL + "/buyers/" + userid + "/requirements";
 }
 
 export function postSellers(data) {
