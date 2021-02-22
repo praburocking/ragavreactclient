@@ -87,17 +87,17 @@ class AddPost extends Form {
   doSubmit = async () => {
     console.log(this.state.data);
     const { data } = this.state;
-    // if (this.state.buyerSeller === "seller") {
-    //   const success = await bs.postSellers(data);
-    //   if (success) {
-    //     window.location = "/post";
-    //   }
-    // } else {
-    //   const success = await bs.postbuyers(data);
-    //   if (success) {
-    //     window.location = "/post";
-    //   }
-    // }
+    if (this.state.buyerSeller === "seller") {
+      const success = await bs.postSellers(data);
+      if (success) {
+        window.location = "/post";
+      }
+    } else {
+      const success = await bs.postbuyers(data);
+      if (success) {
+        window.location = "/post";
+      }
+    }
     // const success = await auth.login(data);
     // console.log("data", success);
     // if (success) {
