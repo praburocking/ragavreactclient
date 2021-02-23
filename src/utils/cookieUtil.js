@@ -8,8 +8,8 @@ export function setCookie(cname, cvalue, exdays) {
   }
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
-  var domain = "domain=" + process.env.REACT_APP_DOMAIN;
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;" + domain;
+  //var domain = "domain=" + process.env.REACT_APP_DOMAIN;
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; // domain;
 }
 
 export function getCookie(cname) {
