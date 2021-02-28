@@ -74,11 +74,11 @@ class AddPost extends Form {
     level: Joi,
   };
 
-  // async componentDidMount() {
-  //   const { data: categories } = await categorie.getcategories();
-  //   const { data: sub_categories } = await categorie.getsubcategories();
-  //   this.setState({ categories, sub_categories });
-  // }
+  async componentDidMount() {
+    const { data: categories } = await categorie.getcategories();
+    const { data: sub_categories } = await categorie.getsubcategories();
+    this.setState({ categories, sub_categories });
+  }
 
   buyerSeller = (b) => {
     this.setState({ buyerSeller: b });
@@ -175,24 +175,20 @@ class AddPost extends Form {
               )}
             </div>
             <div class='p-2 flex-fill bd-highlight'>
-              {this.renderInput("area", "Area In Square ft", "form-control ")}
+              {this.renderInput("area", "Area In Square ft(only numbers*)", "form-control ")}
             </div>
             <div class='p-2 flex-fill bd-highlight'>
-              {this.renderInput("price", "Price In INR", "form-control ")}
+              {this.renderInput("price", "Price In INR(only numbers*)", "form-control ")}
             </div>
           </div>
           <div className=' d-flex justify-content-around '>
             {this.renderInput("org_name", "Organization Name", "form-control")}
 
             {this.renderInput("incharge", "Incharge", "form-control")}
-            {this.renderInput("phone", "Phone", "form-control", false)}
-            {this.renderInput(
-              "alt_phone",
-              "Alt Phone",
-              "form-control",
-              false,
-              "tel"
-            )}
+          </div>
+          <div className=' d-flex justify-content-around '>
+            {this.renderInput("phone", "Phone(only numbers*)", "form-control", false)}
+            {this.renderInput("alt_phone", "Alt Phone(only numbers*)", "form-control", false, "tel")}
           </div>
           <div className='form-group '>
             <label htmlFor='contact_mode'>Mode of Contact</label>
@@ -220,6 +216,7 @@ class AddPost extends Form {
                     "InterView Time in HH:MM",
                     "form-control"
                   )}
+                <>
                   {this.renderInput(
                     "interview_location",
                     "InterView Location",
@@ -252,3 +249,16 @@ class AddPost extends Form {
 }
 
 export default AddPost;
+
+          <span style={{ marginRight: "1rem" }}>
+            {this.renderButton("Submit")}
+          </span>
+          {this.renderButton("Back")}
+
+          
+        </form>
+      </div>
+    );
+  }
+}
+

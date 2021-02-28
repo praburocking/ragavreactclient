@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-  
+    "@material-ui/core": "4.11.3",
+    "@material-ui/icons": "4.11.2",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "joi-browser": "^13.4.0",
+    "material-ui": "0.20.2",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-animated-slider": "^2.0.0",
@@ -28,17 +30,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

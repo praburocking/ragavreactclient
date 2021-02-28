@@ -34,8 +34,9 @@ const LoginSignup = () => {
     const resp = await login(formData);
     console.log(resp);
     if (resp && resp.data && resp.status === 200) {
+      console.log("resp ==>", resp);
       setCookie("id", resp.data.id, 1);
-      //window.location.href = process.env.REACT_APP_SUB_DOMAIN;
+      window.location.href = process.env.REACT_APP_SUB_DOMAIN;
     }
   };
   return (
