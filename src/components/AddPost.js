@@ -216,6 +216,7 @@ class AddPost extends Form {
                     "InterView Time in HH:MM",
                     "form-control"
                   )}
+                <>
                   {this.renderInput(
                     "interview_location",
                     "InterView Location",
@@ -248,3 +249,16 @@ class AddPost extends Form {
 }
 
 export default AddPost;
+
+          <span style={{ marginRight: "1rem" }}>
+            {this.renderButton("Submit")}
+          </span>
+          {this.renderButton("Back")}
+
+          
+        </form>
+      </div>
+    );
+  }
+}
+

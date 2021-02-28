@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { connect } from "react-redux";
 import NavBar from "./components/Navbar";
-import AddPost from "./components/AddPost";
+import AddPost from "./components/new_AddPost";
 
 import Home from "./components/home/Home";
 import Footer from "./components/Footer";
